@@ -9,7 +9,7 @@ namespace MaktabTeamWork2.Models
     public class Employe
     {
 
-        public string id { get; set; }
+        public int id { get; set; }
 
        public string FName { get; set; }
 

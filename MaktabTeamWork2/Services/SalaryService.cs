@@ -23,7 +23,7 @@ namespace MaktabTeamWork2.Services
         public double GetTotalSalaryById(int id)
         {
             var totalIdSalary = (from a in appDB.salaries
-                                 where a.EmployeeId == id.ToString()
+                                 where a.EmployeeId == id
                                  select a.Amont + a.oderBenefit - a.tax);
             return totalIdSalary.Sum();
         }
@@ -31,9 +31,9 @@ namespace MaktabTeamWork2.Services
         public List<Payslip> PayslipByIdForOneMonth(int id, int year, int month)
         {
             var payslip = (from a in appDB.employes
-                           join b in appDB.salaries on a.id equals b.Id
+                           join b in appDB.salaries on a.id equals b.EmployeeId
                            where a.id == id.ToString() 
-                           select new Payslip() {Id = b.EmployeeId , Amount = b.Amont , })
+                           select new Payslip() {Id = b.EmployeeId , Amount = b.Amont ,Tax = b.tax })
         }
     }
 }
