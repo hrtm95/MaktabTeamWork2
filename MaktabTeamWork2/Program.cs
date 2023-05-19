@@ -21,20 +21,34 @@ namespace MaktabTeamWork2
             //Console.WriteLine("enter maont:");
             //int maont = Convert.ToInt32(Console.ReadLine());
 
-
-            
             //List<Payslip> pasys = salaryService.PayslipByIdForOneMonth(employid, year, maont);
 
+            ////Q3
+            //Console.WriteLine("enter your employe id:");
+            //int id = Convert.ToInt32(Console.ReadLine());
 
-            var listem = new EmployeeService();
-            var newList = listem.GetEmployeeName1();
+            //Console.WriteLine(GetTotalSalary(id).ToString());
+
+
+            
 
 
 
-            foreach (var item in newList)
-            {
-                Console.WriteLine("Id: " + item.id + "\t name: " + item.FName);
-            }
+
+
+
+
+
+
+            //var listem = new EmployeeService();
+            //var newList = listem.GetEmployeeName1();
+
+
+
+            //foreach (var item in newList)
+            //{
+            //    Console.WriteLine("Id: " + item.id + "\t name: " + item.FName);
+            //}
 
 
             //foreach (var Pay in pasys)
@@ -48,5 +62,14 @@ namespace MaktabTeamWork2
 
             Console.ReadKey();
         }
+
+        public static double GetTotalSalary(int id)
+        {
+
+            SalaryService salaryService = new SalaryService();
+            double salary = salaryService.GetTotalSalaryById(id);
+            return salary;
+        }
+
     }
 }
