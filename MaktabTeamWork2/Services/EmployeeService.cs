@@ -25,7 +25,8 @@ namespace MaktabTeamWork2.Services
             var getMenEmpName = from a in appDB.employes
                                 where a.gender == "man"
                                 orderby a.id ascending
-                                select new EmployeeNameViewModel();
+                                select new EmployeeNameViewModel() { Id = a.id, Name = a.FName, LastName = a.LName };
+            return getMenEmpName.ToList();
         }
     }
 }
