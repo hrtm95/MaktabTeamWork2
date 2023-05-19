@@ -12,10 +12,10 @@ namespace MaktabTeamWork2.DataBase
     {
         public List<Employe> employes = new List<Employe>()
         {
-            new Employe() {id = "2", FName = "ali", LName = "alipour", Email = "" +
+            new Employe() {id = 2, FName = "ali", LName = "alipour", Email = "" +
                 "1@gmail", gender = "man", mobile = "0900000", nationalCode = "12345"},
 
-              new Employe() {id = "3", FName = "mohammad", LName = "alizadeh", Email = "" +
+              new Employe() {id = 3, FName = "mohammad", LName = "alizadeh", Email = "" +
                 "2@gmail", gender = "man", mobile = "090000110", nationalCode = "6789"}
         };
 

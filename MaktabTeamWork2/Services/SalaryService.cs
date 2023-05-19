@@ -16,8 +16,8 @@ namespace MaktabTeamWork2.Services
         public double GetSumTotalTaxPaid()
         {
             var getTax = (from a in appDB.salaries
-                         select a.tax).Sum();
-            return getTax;                           
+                          select a.tax).Sum();
+            return getTax;
         }
 
         public double GetTotalSalaryById(int id)
@@ -32,8 +32,9 @@ namespace MaktabTeamWork2.Services
         {
             var payslip = (from a in appDB.employes
                            join b in appDB.salaries on a.id equals b.EmployeeId
-                           where a.id == id.ToString() 
-                           select new Payslip() {Id = b.EmployeeId , Amount = b.Amont ,Tax = b.tax })
+                           where a.id == id && b.month == month && b.year == year
+                           select new Payslip() { Id = b.EmployeeId, Amount = b.Amont, Tax = b.tax, OtherBenefit = b.oderBenefit }).ToList();
+            return payslip;
         }
     }
 }
