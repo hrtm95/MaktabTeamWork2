@@ -9,18 +9,18 @@ namespace MaktabTeamWork2.Models
     public class Salary
     {
 
-        string Id { get; set; }
+       public string Id { get; set; }
 
-        double Amont { get; set; }
+        public double Amont { get; set; }
 
-        double tax { get; set; }
+        public double tax { get; set; }
 
-        double oderBenefit { get; set; }
+        public double oderBenefit { get; set; }
 
-        string EmployeeId { get; set; }
+        public string EmployeeId { get; set; }
 
-        TimeSpan year { get; set; }
+        public DateTime year { get; set; }
 
-        TimeSpan month { get; set; }
+        public DateTime month { get; set; }
     }
 }

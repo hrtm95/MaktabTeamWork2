@@ -9,17 +9,17 @@ namespace MaktabTeamWork2.Models
     public class Employe
     {
 
-        string id { get; set; }
-        string FName { get; set; }
+        public string id { get; set; }
+       public string FName { get; set; }
 
-        string LName { get; set; }
+       public string LName { get; set; }
 
-        string nationalCode { get; set; }
+        public string nationalCode { get; set; }
 
-        string mobile { get; set; }
+        public string mobile { get; set; }
 
-        string gender { get; set; }
+        public string gender { get; set; }
 
-        string Email { get; set; }
+        public string Email { get; set; }
     }
 }
