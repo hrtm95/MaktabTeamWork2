@@ -17,7 +17,7 @@ namespace MaktabTeamWork2.Models
 
         public double oderBenefit { get; set; }
 
-        public string EmployeeId { get; set; }
+        public int EmployeeId { get; set; }
 
         public int year { get; set; }
 
