@@ -1,4 +1,5 @@
 ﻿using MaktabTeamWork2.DataBase;
+using MaktabTeamWork2.Models;
 using MaktabTeamWork2.Models.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace MaktabTeamWork2.Services
         {
             var personalNameLastname = from a in appDB.employes
                                        select new EmployeeNameViewModel()
-                                       { Id = a.id, Name = a.FName, LastName = a.LName } ;
+                                       { Id = a.id, Name = a.FName, LastName = a.LName };
             return personalNameLastname.ToList();
         }
 
@@ -28,5 +29,29 @@ namespace MaktabTeamWork2.Services
                                 select new EmployeeNameViewModel() { Id = a.id, Name = a.FName, LastName = a.LName };
             return getMenEmpName.ToList();
         }
+
+        public List<Employe> GetEmployeeName1()
+        {
+            var personalNameLastname = from a in appDB.employes
+                                       select new Employe()
+                                       { id = a.id, FName = a.FName, LName = a.LName };
+            return personalNameLastname.ToList();
+        }
+
+
+        public List<Employe> GetEmployeeName2()
+        {
+            List<Employe> listEmploy = new List<Employe>();
+            var personalNameLastname = (from a in appDB.employes
+                                        select new { id = a.id, FName = a.FName, LName = a.LName }).ToList();
+            foreach (var item in personalNameLastname)
+            {
+                Employe employe = new Employe() { id = item.id , FName= item.FName , LName = item.LName};
+                listEmploy.Add(employe);
+            }
+
+            return listEmploy;
+        }
+
     }
 }
