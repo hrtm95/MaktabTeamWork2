@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace MaktabTeamWork2.DataBase
 {
-    internal class AppDB
+    public class AppDB
     {
-        List<Employe> employes = new List<Employe>()
+        public List<Employe> employes = new List<Employe>()
         {
             new Employe() {id = "2", FName = "ali", LName = "alipour", Email = "" +
                 "1@gmail", gender = "man", mobile = "0900000", nationalCode = "12345"},
@@ -20,20 +20,20 @@ namespace MaktabTeamWork2.DataBase
 
 
 
-        List<Salary> salaries = new List<Salary>()
-        {
-            new Salary() {Id = "20", EmployeeId = "2", Amont = 230, tax = 10, year = Convert.ToDateTime("2021"),
-            month = Convert.ToDateTime("2"), oderBenefit = 20},
+        public List<Salary> salaries = new List<Salary>()
+               {
+            new Salary() {Id = "20", EmployeeId = "2", Amont = 230, tax = 10, year = 2023,
+            month = 2, oderBenefit = 20},
 
-            new Salary() {Id = "20", EmployeeId = "2", Amont = 290, tax = 11, year = Convert.ToDateTime("2021"),
-            month = Convert.ToDateTime("3"), oderBenefit = 21},
+            new Salary() {Id = "21", EmployeeId = "2", Amont = 290, tax = 11, year = 2023,
+            month = 3, oderBenefit = 21},
 
-            new Salary() {Id = "30", EmployeeId = "3", Amont = 200, tax = 10, year = Convert.ToDateTime("2021"),
-            month = Convert.ToDateTime("5"), oderBenefit = 25},
+            new Salary() {Id = "22", EmployeeId = "3", Amont = 200, tax = 10, year = 2023,
+            month = 5, oderBenefit = 25},
 
-            new Salary() {Id = "30", EmployeeId = "3", Amont = 270, tax = 10, year = Convert.ToDateTime("2021"),
-            month = Convert.ToDateTime("8"), oderBenefit = 25},
+            new Salary() {Id = "23", EmployeeId = "3", Amont = 270, tax = 10, year = 2023,
+            month = 8, oderBenefit = 25},
 
-        };
+               };
     }
 }

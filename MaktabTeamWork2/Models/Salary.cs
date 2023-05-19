@@ -19,8 +19,8 @@ namespace MaktabTeamWork2.Models
 
         public string EmployeeId { get; set; }
 
-        public DateTime year { get; set; }
+        public int year { get; set; }
 
-        public DateTime month { get; set; }
+        public int month { get; set; }
     }
 }

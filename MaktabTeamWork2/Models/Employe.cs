@@ -10,6 +10,7 @@ namespace MaktabTeamWork2.Models
     {
 
         public string id { get; set; }
+
        public string FName { get; set; }
 
        public string LName { get; set; }
