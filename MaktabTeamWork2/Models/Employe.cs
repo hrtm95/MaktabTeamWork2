@@ -22,5 +22,6 @@ namespace MaktabTeamWork2.Models
         public string gender { get; set; }
 
         public string Email { get; set; }
+        public string Address { get; set; }
     }
 }
