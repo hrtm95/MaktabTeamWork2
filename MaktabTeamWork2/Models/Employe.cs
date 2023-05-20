@@ -26,5 +26,7 @@ namespace MaktabTeamWork2.Models
         public string EmployeeAddress2 { get; set; }
 
         public string Address2 { get; set; }
+
+        public int PassPortNo { get; set; }
     }
 }
