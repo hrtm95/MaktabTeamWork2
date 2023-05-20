@@ -11,9 +11,9 @@ namespace MaktabTeamWork2.Models
 
         public int id { get; set; }
 
-       public string FName { get; set; }
+        public string FName { get; set; }
 
-       public string LName { get; set; }
+        public string LName { get; set; }
 
         public string nationalCode { get; set; }
 
